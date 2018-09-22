@@ -6,9 +6,20 @@ and deserialize to instance by `MybatisHandleable#parsePersistedValue`.
   
 
 
-## Usage
-### POJO
+## Usage  
 
+### Table
+```sql
+create table users
+(
+  id       int auto_increment
+    primary key,
+  username varchar(60)  null,
+  role     varchar(255) null
+);
+```
+
+### POJO
 Role.java
 ```java
 @Data
@@ -53,7 +64,7 @@ UserDao.java
 @Repository
 public interface UserDao {
 
-    @Insert("insert into test.users (username, role) VALUE (#{username}, #{role})")
+    @Insert("insert into users (username, role) VALUE (#{username}, #{role})")
     void save(User user);
 
     @Select("select * from test.users")
@@ -94,5 +105,6 @@ public class UserTest {
 
 test should pass, and console's output will contains something like:  
 `[User(id=26, username=test, role=Role(name=role name, roleLevel=2))]`  
-and look around the database: 
+  
+Then, look around the database: 
 ![database result](doc/example_database.png)
