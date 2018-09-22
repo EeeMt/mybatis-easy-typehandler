@@ -12,6 +12,14 @@
     <description>implement a interface to easily persist anything into database</description>
     <url>https://github.com/EeeMt/mybatis-easy-typehandler</url>
 
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
     <developers>
         <developer>
             <name>eeemt</name>
@@ -20,6 +28,12 @@
             <id>me</id>
         </developer>
     </developers>
+
+    <scm>
+        <connection>scm:git:https://github.com/EeeMt/mybatis-easy-typehandler.git</connection>
+        <developerConnection>scm:git:git@github.com:EeeMt/mybatis-easy-typehandler.git</developerConnection>
+        <url>https://github.com/EeeMt/mybatis-easy-typehandler</url>
+    </scm>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -107,4 +121,34 @@
             </plugin>
         </plugins>
     </build>
+
+    <!--<profiles>-->
+    <!--<profile>-->
+    <!--<id>release-sign-artifacts</id>-->
+    <!--<activation>-->
+    <!--<property>-->
+    <!--<name>performRelease</name>-->
+    <!--<value>true</value>-->
+    <!--</property>-->
+    <!--</activation>-->
+    <!--<build>-->
+    <!--<plugins>-->
+    <!--<plugin>-->
+    <!--<groupId>org.apache.maven.plugins</groupId>-->
+    <!--<artifactId>maven-gpg-plugin</artifactId>-->
+    <!--<version>1.1</version>-->
+    <!--<executions>-->
+    <!--<execution>-->
+    <!--<id>sign-artifacts</id>-->
+    <!--<phase>verify</phase>-->
+    <!--<goals>-->
+    <!--<goal>sign</goal>-->
+    <!--</goals>-->
+    <!--</execution>-->
+    <!--</executions>-->
+    <!--</plugin>-->
+    <!--</plugins>-->
+    <!--</build>-->
+    <!--</profile>-->
+    <!--</profiles>-->
 </project>
