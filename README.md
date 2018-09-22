@@ -93,4 +93,6 @@ public class UserTest {
 ```
 
 test should pass, and console's output will contains something like:  
-`[User(id=26, username=test, role=Role(name=role name, roleLevel=2))]`
+`[User(id=26, username=test, role=Role(name=role name, roleLevel=2))]`  
+and look around the database: 
+![database result](doc/example_database.png)
