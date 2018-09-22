@@ -42,7 +42,6 @@ public class HandlerConfig {
                     .filter(type -> type.getEnclosingClass() == null)
                     .filter(type -> !type.isInterface())
                     .forEach(type -> typeHandlerRegistry.register(type, PersistableHandler.class));
-            System.out.println(typeHandlerRegistry);
         };
     }
 }
