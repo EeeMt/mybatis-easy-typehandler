@@ -11,7 +11,11 @@
     <name>mybatis-easy-typehandler</name>
     <description>implement a interface to easily persist anything into database</description>
     <url>https://github.com/EeeMt/mybatis-easy-typehandler</url>
-
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>9</version>
+    </parent>
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
@@ -119,36 +123,51 @@
                     </execution>
                 </executions>
             </plugin>
+            <!--<plugin>-->
+            <!--<groupId>org.apache.maven.plugins</groupId>-->
+            <!--<artifactId>maven-gpg-plugin</artifactId>-->
+            <!--<version>1.6</version>-->
+            <!--<executions>-->
+            <!--<execution>-->
+            <!--<id>sign-artifacts</id>-->
+            <!--<phase>verify</phase>-->
+            <!--<goals>-->
+            <!--<goal>sign</goal>-->
+            <!--</goals>-->
+            <!--</execution>-->
+            <!--</executions>-->
+            <!--</plugin>-->
+
         </plugins>
     </build>
 
-    <!--<profiles>-->
-    <!--<profile>-->
-    <!--<id>release-sign-artifacts</id>-->
-    <!--<activation>-->
-    <!--<property>-->
-    <!--<name>performRelease</name>-->
-    <!--<value>true</value>-->
-    <!--</property>-->
-    <!--</activation>-->
-    <!--<build>-->
-    <!--<plugins>-->
-    <!--<plugin>-->
-    <!--<groupId>org.apache.maven.plugins</groupId>-->
-    <!--<artifactId>maven-gpg-plugin</artifactId>-->
-    <!--<version>1.1</version>-->
-    <!--<executions>-->
-    <!--<execution>-->
-    <!--<id>sign-artifacts</id>-->
-    <!--<phase>verify</phase>-->
-    <!--<goals>-->
-    <!--<goal>sign</goal>-->
-    <!--</goals>-->
-    <!--</execution>-->
-    <!--</executions>-->
-    <!--</plugin>-->
-    <!--</plugins>-->
-    <!--</build>-->
-    <!--</profile>-->
-    <!--</profiles>-->
+    <profiles>
+        <profile>
+            <id>release-sign-artifacts</id>
+            <activation>
+                <property>
+                    <name>performRelease</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.6</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
