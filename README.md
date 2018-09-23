@@ -107,4 +107,12 @@ test should pass, and console's output will contains something like:
 `[User(id=26, username=test, role=Role(name=role name, roleLevel=2))]`  
   
 Then, look around the database: 
-![database result](doc/example_database.png)
+![database result](doc/example_database.png)  
+
+
+## Notice  
+
+Does not working with `Druid` yet, because `Druid`(version:`1.1.5`) does't support none of flowing JDBC method:
+- `java.sql.ResultSet.getObject(java.lang.String, java.lang.Class<T>)`
+- `java.sql.ResultSet.getObject(int, java.lang.Class<T>)`
+- `java.sql.CallableStatement.getObject(int, java.lang.Class<T>)`
