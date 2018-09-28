@@ -12,7 +12,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 @Slf4j
-@SuppressWarnings("WeakerAccess")
+@SuppressWarnings({"WeakerAccess", "FieldCanBeLocal"})
 public class PersistableHandler<V, E extends MybatisHandleable<V, E>> extends BaseTypeHandler<E> {
 
     private Class<E> classType;
@@ -79,19 +79,37 @@ public class PersistableHandler<V, E extends MybatisHandleable<V, E>> extends Ba
 
     @Override
     public E getNullableResult(ResultSet rs, String columnName) throws SQLException {
-        V value = rs.getObject(columnName, valueType);
+        V value;
+        try {
+            value = rs.getObject(columnName, valueType);
+        } catch (Exception e) {
+            //noinspection unchecked
+            value = (V) rs.getObject(columnName);
+        }
         return rs.wasNull() ? null : parse(value);
     }
 
     @Override
     public E getNullableResult(ResultSet rs, int columnIndex) throws SQLException {
-        V value = rs.getObject(columnIndex, valueType);
+        V value;
+        try {
+            value = rs.getObject(columnIndex, valueType);
+        } catch (Exception e) {
+            //noinspection unchecked
+            value = (V) rs.getObject(columnIndex);
+        }
         return rs.wasNull() ? null : parse(value);
     }
 
     @Override
     public E getNullableResult(CallableStatement cs, int columnIndex) throws SQLException {
-        V value = cs.getObject(columnIndex, valueType);
+        V value;
+        try {
+            value = cs.getObject(columnIndex, valueType);
+        } catch (Exception e) {
+            //noinspection unchecked
+            value = (V) cs.getObject(columnIndex);
+        }
         return cs.wasNull() ? null : parse(value);
     }
 
