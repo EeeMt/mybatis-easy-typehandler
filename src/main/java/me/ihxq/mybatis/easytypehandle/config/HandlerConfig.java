@@ -5,6 +5,7 @@ import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import me.ihxq.mybatis.easytypehandle.handler.MybatisHandleable;
 import me.ihxq.mybatis.easytypehandle.handler.PersistableHandler;
+import me.ihxq.mybatis.easytypehandle.preset.HandleableEnum;
 import org.apache.ibatis.type.TypeHandlerRegistry;
 import org.mybatis.spring.boot.autoconfigure.ConfigurationCustomizer;
 import org.reflections.Reflections;
@@ -12,6 +13,7 @@ import org.reflections.util.ClasspathHelper;
 import org.reflections.util.ConfigurationBuilder;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.HashSet;
@@ -20,6 +22,7 @@ import java.util.stream.Collectors;
 
 @Slf4j
 @Configuration
+@ComponentScan(basePackageClasses = HandleableEnum.class)
 @ConfigurationProperties(prefix = "mybatis.easy-type-handlers")
 public class HandlerConfig {
 
