@@ -1,1 +1,1 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=me.ihxq.mybatis.easytypehandle.config.HandlerConfig
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=me.ihxq.mybatis.easytypehandle.config.PersistableConfig
