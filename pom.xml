@@ -6,7 +6,7 @@
 
     <groupId>me.ihxq.projects</groupId>
     <artifactId>mybatis-easy-typehandler</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.1-beta</version>
     <packaging>jar</packaging>
     <name>mybatis-easy-typehandler</name>
     <description>implement a interface to easily persist anything into database</description>
@@ -133,11 +133,11 @@
 
     <distributionManagement>
         <snapshotRepository>
-            <id>snapshots</id>
+            <id>sonatype_snapshots</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
         <repository>
-            <id>releases</id>
+            <id>sonatype_releases</id>
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
