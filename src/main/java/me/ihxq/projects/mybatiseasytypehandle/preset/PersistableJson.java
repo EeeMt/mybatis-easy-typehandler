@@ -1,8 +1,8 @@
-package me.ihxq.mybatis.easytypehandle.preset;
+package me.ihxq.projects.mybatiseasytypehandle.preset;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import me.ihxq.mybatis.easytypehandle.handler.Persistable;
+import me.ihxq.projects.mybatiseasytypehandle.handler.Persistable;
 
 public interface PersistableJson<E> extends Persistable<E, String> {
 

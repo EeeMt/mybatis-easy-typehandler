@@ -1,6 +1,6 @@
-package me.ihxq.mybatis.easytypehandle.preset;
+package me.ihxq.projects.mybatiseasytypehandle.preset;
 
-import me.ihxq.mybatis.easytypehandle.handler.Persistable;
+import me.ihxq.projects.mybatiseasytypehandle.handler.Persistable;
 
 public interface PersistableEnum<E extends Enum, V> extends Persistable<E, V> {
 

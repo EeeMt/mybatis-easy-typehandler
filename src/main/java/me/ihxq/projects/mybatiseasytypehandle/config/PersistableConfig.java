@@ -1,10 +1,10 @@
-package me.ihxq.mybatis.easytypehandle.config;
+package me.ihxq.projects.mybatiseasytypehandle.config;
 
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
-import me.ihxq.mybatis.easytypehandle.handler.Persistable;
-import me.ihxq.mybatis.easytypehandle.handler.PersistableHandler;
+import me.ihxq.projects.mybatiseasytypehandle.handler.Persistable;
+import me.ihxq.projects.mybatiseasytypehandle.handler.PersistableHandler;
 import org.apache.ibatis.type.TypeHandlerRegistry;
 import org.mybatis.spring.boot.autoconfigure.ConfigurationCustomizer;
 import org.reflections.Reflections;

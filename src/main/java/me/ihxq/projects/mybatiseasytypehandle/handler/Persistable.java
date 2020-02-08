@@ -1,4 +1,4 @@
-package me.ihxq.mybatis.easytypehandle.handler;
+package me.ihxq.projects.mybatiseasytypehandle.handler;
 
 public interface Persistable<E, V> {
 

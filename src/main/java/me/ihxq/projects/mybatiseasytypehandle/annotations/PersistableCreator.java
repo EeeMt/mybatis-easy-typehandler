@@ -1,4 +1,4 @@
-package me.ihxq.mybatis.easytypehandle.annotations;
+package me.ihxq.projects.mybatiseasytypehandle.annotations;
 
 import com.fasterxml.jackson.annotation.JacksonAnnotation;
 

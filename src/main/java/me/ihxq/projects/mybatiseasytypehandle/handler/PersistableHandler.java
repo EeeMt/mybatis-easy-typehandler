@@ -1,4 +1,4 @@
-package me.ihxq.mybatis.easytypehandle.handler;
+package me.ihxq.projects.mybatiseasytypehandle.handler;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.type.BaseTypeHandler;
