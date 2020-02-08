@@ -17,9 +17,9 @@ public interface PersistableJson<E> extends Persistable<E, String> {
 
 
     @JsonIgnore
+    @SuppressWarnings("unchecked")
     default E parsePersistedValue(String value) {
         try {
-            //noinspection unchecked
             return (E) this.getObjectMapper().readValue(value, this.getClass());
         } catch (Exception e) {
             throw new RuntimeException(e);
